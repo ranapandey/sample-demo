@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-toolbar style="height: 100%;">
+    <div style="display: inline-flex;width: 100%;">
+      <ion-buttons slot="start">
+        <ion-back-button mode="md"></ion-back-button>
+      </ion-buttons>
+      <div style="width: -webkit-calc(100% - 50px);  justify-content: center;align-items: center; display: flex;">
+        <ion-label>{{userName}}</ion-label>
+      </div>
+    </div>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+  <ion-card *ngFor="let item of commonData.addToCartData; let i=index">
+    <ion-card-content style="width: 100%;">
+      <div>
+        <div>{{item.productName}}</div>
+        <div>{{item.ram}}</div>
+      </div>
+      <div>
+        <ion-button (click)="detailClicked(i)">Details</ion-button>
+        <ion-button (click)="removeClicked(i)">remove</ion-button>
+      </div>
+    </ion-card-content>
+  </ion-card>
+  <div *ngIf="commonData.addToCartData.length == 0" class="noData">
+    <h4>Your cart is empty</h4>
+  </div>
+
+</ion-content>

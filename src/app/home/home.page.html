@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-toolbar style="height: 100%;">
+    <div style="display: inline-flex;width: 100%;">
+      <div style="width: -webkit-calc(100% - 100px);  justify-content: center;align-items: center; display: flex;">
+        <ion-label>{{userName}}</ion-label>
+      </div>
+      <div>
+        <div style="position: relative;display: inline-block;">
+          <div class="numberCircle">{{cartValue}}</div>
+          <ion-icon style="height: 30px;width: 30px;" name="cart-outline" (click)="cartClicked()"></ion-icon>
+        </div>
+        <ion-icon style="height: 30px; width: 30px;margin-left:15px" name="log-out-outline" (click)="logout()">
+        </ion-icon>
+      </div>
+    </div>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+
+
+  <ion-card *ngFor="let item of data; let i=index">
+    <ion-card-content style="width: 100%;">
+      <div>
+        <div>{{item.productName}}</div>
+        <div>{{item.ram}}</div>
+      </div>
+      <div>
+        <ion-button (click)="detailClicked(i)">Details</ion-button>
+        <ion-button (click)="addToCartClicked(i)">Add to cart</ion-button>
+      </div>
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>

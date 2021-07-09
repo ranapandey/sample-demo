@@ -1,0 +1,51 @@
+<ion-header>
+  <ion-toolbar style="height: 100%;">
+    <div style="display: inline-flex;width: 100%;">
+      <ion-buttons slot="start">
+        <ion-back-button mode="md"></ion-back-button>
+      </ion-buttons>
+      <div style="width: -webkit-calc(100% - 50px);  justify-content: center;align-items: center; display: flex;">
+        <ion-label>{{userName}}</ion-label>
+      </div>
+    </div>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list style="padding: 10px;">
+    <ion-item class="ion-no-padding">
+      <ion-label position="floating" color="none" class="floatingLabel">Product Name</ion-label>
+      <ion-input [(ngModel)]="productName" readonly="true"></ion-input>
+    </ion-item>
+
+    <ion-item class="ion-no-padding" style="--background: transparent;">
+      <ion-label position="floating" color="none" class="floatingLabel">CPU</ion-label>
+      <ion-input [(ngModel)]="cpu" readonly="true"></ion-input>
+    </ion-item>
+
+    <ion-item class="ion-no-padding" style="--background: transparent;">
+      <ion-label position="floating" color="none" class="floatingLabel">Screen</ion-label>
+      <ion-input [(ngModel)]="screen" readonly="true"></ion-input>
+    </ion-item>
+
+    <ion-item class="ion-no-padding">
+      <ion-label position="floating" color="none" class="floatingLabel">Storage</ion-label>
+      <ion-input [(ngModel)]="storage" readonly="true"></ion-input>
+    </ion-item>
+    <ion-item class="ion-no-padding">
+      <ion-label position="floating" color="none" class="floatingLabel">Ram</ion-label>
+      <ion-input [(ngModel)]="ram" readonly="true"></ion-input>
+    </ion-item>
+    <ion-item class="ion-no-padding">
+      <ion-label position="floating" color="none" class="floatingLabel">Description</ion-label>
+      <ion-textarea autoGrow="true" [(ngModel)]="description" readonly="true"></ion-textarea>
+    </ion-item>
+
+
+    <ion-card style="height: 300px;">
+      <iframe width="100%" height="100%" [src]="video" frameborder="0" allowfullscreen></iframe>
+    </ion-card>
+  </ion-list>
+
+
+</ion-content>

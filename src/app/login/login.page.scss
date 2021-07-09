@@ -1,0 +1,33 @@
+.floatingLabel {
+    color: #979192;
+    font-size: 12px;
+}
+ion-input {
+    color: #665b5e;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+:host {
+    .item-interactive.ion-invalid {
+        --highlight-background: none !important;
+    }
+    .item-interactive.ion-valid {
+        --highlight-background: none !important;
+    }
+}
+ion-label {
+    color: black;
+}
+code-input {
+    --item-spacing: 10px;
+    --item-height: 3em;
+    --item-border: none;
+    --item-border-bottom: 2px solid #dddddd;
+    --item-border-has-value: none;
+    --item-border-bottom-has-value: 2px solid #888888;
+    --item-border-focused: none;
+    --item-border-bottom-focused: 2px solid #809070;
+    --item-shadow-focused: none;
+    --item-border-radius: 0px;
+}

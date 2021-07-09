@@ -1,0 +1,41 @@
+<ion-content>
+
+  <div style="padding-left: 25px;padding-right: 25px;margin-top: 90px;z-index: 99;position: relative;">
+
+    <div style="margin-top: 10px;">
+      <div>
+        <ion-label style="font-size: 18px;font-weight: bold;color: #231f20;">Enter your Credientials
+        </ion-label>
+      </div>
+
+      <ion-list>
+        <ion-item class="ion-no-padding" style="margin-top: 20px;">
+          <ion-label position="floating" class="floatingLabel" color="none">Enter Username</ion-label>
+          <ion-input type="text" [(ngModel)]="userName" style="font-size: 14px;color: #413c3c;font-weight: bold;">
+          </ion-input>
+        </ion-item>
+        <ion-item class="ion-no-padding" style="margin-top: 20px;">
+          <ion-label position="floating" class="floatingLabel" color="none">Enter Password</ion-label>
+          <ion-input type="password" [(ngModel)]="password" style="font-size: 14px;color: #413c3c;font-weight: bold;"
+            autocapitalize="characters">
+          </ion-input>
+        </ion-item>
+      </ion-list>
+
+    </div>
+
+
+
+
+    <div style="text-align: center;margin-top: 30px;" class="btn">
+      <ion-button shape="round" color="dark" style="height: 40px;font-size: 14px;font-weight: bold;width: 220px;"
+        (click)="login()">
+        <div class="btn-text">Login</div>
+      </ion-button>
+    </div>
+
+
+  </div>
+
+
+</ion-content>
